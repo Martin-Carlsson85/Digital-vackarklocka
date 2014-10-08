@@ -143,11 +143,11 @@ namespace Digital_vackarklocka
         {
             if (Minute < 10)
             {
-                return string.Format("{0}:0{1}", Hour, Minute); //Om Minute är en siffra så läggs 0 till innan siffran.
+                return string.Format("{0}:0{1}", Hour, Minute); //Om "Minute" endast består utav en siffra, läggs det en 0:a till framför.
             }
             else
             {
-                return string.Format("{0}:{1}", Hour, Minute); //Annars om Minute är ett tal så läggs inte 0 till.
+                return string.Format("{0}:{1}", Hour, Minute); //Om "Minute" skulle vara ett tal så läggs det inte till något framför.
             }
         }
     }
