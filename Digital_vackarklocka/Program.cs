@@ -10,7 +10,9 @@ namespace Digital_vackarklocka
     {
         static void Main(string[] args)
         {
-          
+            AlarmClock ac = new AlarmClock();
+            Console.WriteLine("test 1");
+            Console.WriteLine(ac);
 
                
 

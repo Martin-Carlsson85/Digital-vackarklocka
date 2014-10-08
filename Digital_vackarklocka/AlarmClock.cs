@@ -16,7 +16,7 @@ namespace Digital_vackarklocka
 
 
         //Egenskaper
-        public int AlarmMinute
+        public int AlarmHour
         {
             get { return _alarmaHour; }
 
@@ -113,9 +113,42 @@ namespace Digital_vackarklocka
 
 
         //Metoder
-        public void TickTock();
+        public bool TickTock()
+        {
+            Minute++;
+            if (_minute < 59)
+            {
+                Minute = 0;
 
+                Hour++;
 
-        public void ToString();
+                if (Hour > 23)    
+                {
+                    Hour = 0;
+                }
+            }
+            if (Hour == AlarmHour && Minute == AlarmMinute)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        
+    
+    
+        }
+        public override string ToString()
+        {
+            if (Minute < 10)
+            {
+                return string.Format("{0}:0{1}", Hour, Minute); //Om Minute är en siffra så läggs 0 till innan siffran.
+            }
+            else
+            {
+                return string.Format("{0}:{1}", Hour, Minute); //Annars om Minute är ett tal så läggs inte 0 till.
+            }
+        }
     }
 }

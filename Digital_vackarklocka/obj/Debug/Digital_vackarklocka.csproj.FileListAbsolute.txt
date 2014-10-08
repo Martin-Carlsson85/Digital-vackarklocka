@@ -1,1 +1,2 @@
 P:\c#\Uppgifter\1dv402-mc22dg-2-2-digital-vackarklocka\Digital_vackarklocka\bin\Debug\Digital_vackarklocka.exe.config
+P:\c#\Uppgifter\1dv402-mc22dg-2-2-digital-vackarklocka\Digital_vackarklocka\obj\Debug\Digital_vackarklocka.csprojResolveAssemblyReference.cache
