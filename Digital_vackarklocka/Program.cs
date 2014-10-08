@@ -16,18 +16,19 @@ namespace Digital_vackarklocka
 
        }
 
+       //Metoder som 
 
-        static void Run()
+        private static void Run()
         { 
-        
+         AlarmClock clock = new AlarmClock;   
         }
 
-        static void ViewErrorMessage()
+        private static void ViewErrorMessage()
         {
-
+            //Skriver ut felmeddelande.
         }
 
-        static void ViewTestHeader()
+        private static void ViewTestHeader()
         {
 
         }
