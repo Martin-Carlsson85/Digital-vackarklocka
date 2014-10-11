@@ -38,7 +38,7 @@ namespace Digital_vackarklocka
 
             set
             {
-                if (value < 0 || value > 23)
+                if (value < 0 || value > 59)
                 {
                     throw new ArgumentException();
 
@@ -74,7 +74,7 @@ namespace Digital_vackarklocka
 
             set
             {
-                if (value < 0 || value > 23)
+                if (value < 0 || value > 59)
                 {
                     throw new ArgumentException();
 
@@ -115,18 +115,25 @@ namespace Digital_vackarklocka
         //Metoder
         public bool TickTock()
         {
-            Minute++;
-            if (_minute < 59)
+                
+            if (Minute == 59)
             {
+                
                 Minute = 0;
 
-                Hour++;
-
-                if (Hour > 23)    
+              
+                
+                if (Hour == 23)    
                 {
                     Hour = 0;
                 }
+
+
+                
             }
+
+            Minute++;
+
             if (Hour == AlarmHour && Minute == AlarmMinute)
             {
                 return true;
@@ -143,11 +150,11 @@ namespace Digital_vackarklocka
         {
             if (Minute < 10)
             {
-                return string.Format("{0}:0{1}", Hour, Minute); //Om "Minute" endast består utav en siffra, läggs det en 0:a till framför.
+                return string.Format("{0}:0{1} ({2}:0{3})", Hour, Minute, AlarmHour, AlarmMinute); //Om "Minute" endast består utav en siffra, läggs det en 0:a till framför.
             }
             else
             {
-                return string.Format("{0}:{1}", Hour, Minute); //Om "Minute" skulle vara ett tal så läggs det inte till något framför.
+                return string.Format("{0}:0{1} ({2}:0{3})", Hour, Minute, AlarmHour, AlarmMinute); //Om "Minute" skulle vara ett tal så läggs det inte till något framför.
             }
         }
     }

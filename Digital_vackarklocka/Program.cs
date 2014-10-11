@@ -10,38 +10,55 @@ namespace Digital_vackarklocka
     {
         static void Main(string[] args)
         {
+            //Test 1
             AlarmClock ac = new AlarmClock();
             Console.WriteLine("test 1");
             Console.WriteLine(ac);
 
+            //Test 2
             ac = new AlarmClock(9, 42);
             Console.WriteLine("test 2");
             Console.WriteLine(ac);
 
+
+            //Test 3
             ac = new AlarmClock(13, 24, 7, 35);
             Console.WriteLine("test 3");
             Console.WriteLine(ac);
 
-            ac = new AlarmClock(23, 58);
+            //Test 4
+            ac = new AlarmClock(23, 58, 7, 35);
             Console.WriteLine("test 4");
+            Run(ac, 13);
             Console.WriteLine(ac);
 
-            ac = new AlarmClock();
+            //Test 5
+            ac = new AlarmClock(6, 12, 6, 15);
             Console.WriteLine("test 5");
+            Run(ac, 6);
             Console.WriteLine(ac);
 
+            //Test 6
             ac = new AlarmClock();
             Console.WriteLine("test 6");
             Console.WriteLine(ac);
+          
+            
 
-            ac.TickTock();
        }
 
-       //Metoder som 
+       //Metoder
 
         private static void Run(AlarmClock ac, int minutes)
         { 
-         AlarmClock clock = new AlarmClock();   
+        
+
+         for (int i = 0; i < minutes; i++)
+         {
+             ac.TickTock();
+             Console.WriteLine(ac);
+         }
+     
         }
 
         private static void ViewErrorMessage(string message)
