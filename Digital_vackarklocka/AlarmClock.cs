@@ -148,14 +148,7 @@ namespace Digital_vackarklocka
         }
         public override string ToString()
         {
-            if (Minute < 10)
-            {
-                return string.Format("{0}:0{1} ({2}:0{3})", Hour, Minute, AlarmHour, AlarmMinute); //Om "Minute" endast består utav en siffra, läggs det en 0:a till framför.
-            }
-            else
-            {
-                return string.Format("{0}:0{1} ({2}:0{3})", Hour, Minute, AlarmHour, AlarmMinute); //Om "Minute" skulle vara ett tal så läggs det inte till något framför.
-            }
+                return string.Format("{0}:{1:D} ({2}:{3:D})", Hour, Minute, AlarmHour, AlarmMinute); //Om "Minute" endast består utav en siffra, läggs det en 0:a till framför.
         }
     }
 }

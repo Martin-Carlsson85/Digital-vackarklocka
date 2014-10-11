@@ -55,18 +55,18 @@ namespace Digital_vackarklocka
 
          for (int i = 0; i < minutes; i++)
          {
-             ac.TickTock();
-             Console.WriteLine(ac);
 
              if (ac.TickTock())
              {
-                 Console.WriteLine(ac);
+                 Console.BackgroundColor = ConsoleColor.Blue;
+                 Console.WriteLine("{0}BEEP! BEEP! BEEP!", ac);
+                 Console.ResetColor(); 
 
              }
              else
-                 Console.WriteLine("BEEP! BEEP! BEEP!");
-                 Console.BackgroundColor = ConsoleColor.Blue;
-                
+             {
+                 Console.WriteLine(ac);
+             }
          }
      
         }
