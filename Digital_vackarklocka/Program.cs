@@ -13,37 +13,37 @@ namespace Digital_vackarklocka
             //Test 1
             AlarmClock ac = new AlarmClock();
             Console.WriteLine("test 1");
-            Console.WriteLine(ac);
+           
 
             //Test 2
             ac = new AlarmClock(9, 42);
             Console.WriteLine("test 2");
-            Console.WriteLine(ac);
+            
 
 
             //Test 3
             ac = new AlarmClock(13, 24, 7, 35);
             Console.WriteLine("test 3");
-            Console.WriteLine(ac);
+           
 
             //Test 4
             ac = new AlarmClock(23, 58, 7, 35);
             Console.WriteLine("test 4");
             Run(ac, 13);
-            Console.WriteLine(ac);
-
+           
             //Test 5
             ac = new AlarmClock(6, 12, 6, 15);
             Console.WriteLine("test 5");
             Run(ac, 6);
-            Console.WriteLine(ac);
+        
+            
 
             //Test 6
             ac = new AlarmClock();
             Console.WriteLine("test 6");
-            Console.WriteLine(ac);
+           
           
-            
+        
 
        }
 
@@ -57,6 +57,16 @@ namespace Digital_vackarklocka
          {
              ac.TickTock();
              Console.WriteLine(ac);
+
+             if (ac.TickTock())
+             {
+                 Console.WriteLine(ac);
+
+             }
+             else
+                 Console.WriteLine("BEEP! BEEP! BEEP!");
+                 Console.BackgroundColor = ConsoleColor.Blue;
+                
          }
      
         }
